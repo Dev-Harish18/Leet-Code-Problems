@@ -10,10 +10,11 @@ int LastNonRepeating(int *arr,int length){
     for(int i=length-1;i>=0;i--)
         if(hashMap[arr[i]]==1)
             return arr[i];
+    return -1;
 }
 
 int main() {
-    int arr[]={1,4,3,6,2,5,1,3,4,6};
+    int arr[]={1,4,3,6,2,5,1,2,5,3,4,6};
     int length=sizeof(arr)/sizeof(arr[0]);
     cout<<LastNonRepeating(arr,length);
 	return 0;
